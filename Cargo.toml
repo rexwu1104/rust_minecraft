@@ -1,10 +1,20 @@
 [package]
 name = "rust_minecraft"
-version = "0.1.0"
+version = "0.0.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
-glium = "0.32.1"
-image = "0.24.4"
+serde-wasm-bindgen = "0.4.3"
+js-sys = "0.3.59"
+serde = { version = "1.0.140", features = ["derive"] }
+wasm-bindgen = { version = "0.2.82", features = ["serde-serialize"] }
+wasm-bindgen-futures = "0.4.32"
+web-sys = "0.3.59"
+yew = "0.19"
+
+[workspace]
+members = [
+    "src-tauri",
+    "rust_minecraft_backend"
+]
